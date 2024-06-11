@@ -5,11 +5,12 @@ for (let index = 0; index <= 2; index++) {
 }
 music.playTone(523, music.beat(BeatFraction.Whole))
 basic.showString("go")
-for (let index2 = 0; index2 <= 10000; index2++) {
+for (let index2 = 0; index2 <= 1e+161; index2++) {
     datalogger.mirrorToSerial(true)
     datalogger.includeTimestamp(FlashLogTimeStampFormat.None)
-    datalogger.deleteLog(datalogger.DeleteType.Full)
+    datalogger.setColumnTitles("ping 20.49.104.33 -t")
     datalogger.log(datalogger.createCV("pack miss", 100))
+    serial.writeLine("ping 20.49.104.33 -t")
     serial.writeLine("webise break message(if stop is mean break the webise)")
     serial.writeString("C:>breakingmicrobitwebise")
 }
