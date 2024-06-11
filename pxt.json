@@ -1,5 +1,6 @@
 {
     "name": "Countdown of the webise",
+    "version": "0.1.0",
     "description": "",
     "dependencies": {
         "core": "*",
